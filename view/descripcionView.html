@@ -1,0 +1,35 @@
+{{> header}}
+<div
+  style="
+    background-image: url(/public/background.jpg);
+    background-repeat: repeat;
+  "
+>
+  <div
+    class="w3-container w3-content w3-center w3-padding-64"
+    style="max-width: 800px; background-color: rgba(255, 255, 255, 0.5)"
+    id="band"
+  >
+  {{#pokemones}}
+      <h2 class="w3-wide">{{nombre}}</h2>
+      <div>Numero : {{numero}}</div>
+      <div>Tipo: <img src="/public/{{tipo}}.png" class="imagen" /></div>
+      <div>Descripcion: {{descripcion}}</div>
+      <div class="w3-display-top-left">
+        <img src="/public/{{imagen}}" />
+      </div>
+      {{/pokemones}}
+      {{#admin}}
+        <a href="/pokedex/modificar" class="w3-button w3-amber w3-round">Modificar</a>
+        <a href="/pokedex/baja" class="w3-button w3-amber w3-round">Dar de Baja</a>
+      {{/admin}}
+    </div>
+  </div>
+</div>
+{{> footer}}
+
+<style>
+    .imagen {
+      width: 30px;
+    }
+</style>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<title>Pokedex TP</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<body>
+
+<!-- Navbar -->
+<div class="w3-top">
+    <div class="w3-bar w3-yellow w3-card" style="display:flex;">
+        <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+        <div class="w3-padding-16"><a href="/"><img src="../../public/pockeball.png" style="width:32px; height:32px; margin-left:5px; margin-right:5px;"><span>Pokedex</span></a></div>
+        <a href="/registro" class="w3-padding-16 w3-button" style="margin-left:30px;">Registro</a>
+
+        {{#usuario}}
+            <a href = "#" class="w3-padding-16 w3-button">{{usuario}}</a>
+            <a href = "/login/logout" class="w3-padding-16 w3-button">Cerrar Sesion</a>
+        {{/usuario}}
+
+        {{^usuario}}
+            <a href = "/login" class="w3-padding-16 w3-button">Login</a>
+        {{/usuario}}
+    </div>
+</div>
+

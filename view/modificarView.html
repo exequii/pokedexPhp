@@ -1,0 +1,73 @@
+{{> header}}
+<div
+  style="
+    background-image: url(/public/background.jpg);
+    background-repeat: repeat;
+  "
+>
+  <div
+    class="w3-container w3-content w3-center w3-padding-64"
+    style="max-width: 800px; background-color: rgba(255, 255, 255, 0.5)"
+    id="band"
+  >
+    <h2 class="w3-wide">Nuevo Pokemon</h2>
+    <form
+      action="/pokemon/cambiarDatos"
+      method="post"
+      enctype="multipart/form-data"
+    >
+      <div class="w3-row w3-padding-32 columna">
+        <label for="numero">Numero</label>
+        <input
+          type="text"
+          name="numero"
+          placeholder="Ingrese numero.."
+          class="w3-input"
+        />
+        <label for="nombre">Nombre</label>
+        <input
+          type="text"
+          name="nombre"
+          placeholder="Ingrese nombre.."
+          class="w3-input"
+        />
+        <label for="tipo">Tipo</label>
+        <select class="w3-input" name="tipo">
+          <option value="fuego">Fuego</option>
+          <option value="planta">Planta</option>
+          <option value="agua">Agua</option>
+        </select>
+        <label for="descripcion">Descripcion</label>
+        <input
+          type="text"
+          name="descripcion"
+          placeholder="Ingrese descripcion.."
+          class="w3-input"
+        />
+        <label for="imagen">Imagen</label>
+        <input
+          type="file"
+          name="imagen"
+          placeholder="Ingrese imagen.."
+          class="w3-input"
+        />
+
+        <button
+          type="submit"
+          class="w3-button w3-blue"
+          style="margin-top: 20px"
+        >
+          Crear
+        </button>
+      </div>
+    </form>
+  </div>
+</div>
+{{> footer}}
+
+<style>
+  .columna {
+    display: flex;
+    flex-direction: column;
+  }
+</style>
